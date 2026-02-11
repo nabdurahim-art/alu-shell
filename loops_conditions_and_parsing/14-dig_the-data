@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+# Groups Apache log entries by IP and HTTP status code and displays occurrence counts in descending order
 
 awk '{print $1, $9}' apache-access.log | \
 sort | \
 uniq -c | \
 sort -nr
+
