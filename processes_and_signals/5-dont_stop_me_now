@@ -2,5 +2,5 @@
 # Stops the 4-to_infinity_and_beyond process
 
 # shellcheck disable=SC2009
-kill $(ps -ef | grep "4-to_infinity_and_beyond" | grep -v grep | awk '{print $2}')
+ps -ef | grep "4-to_infinity_and_beyond" | grep -v grep | awk '{print $2}' | xargs kill
 
