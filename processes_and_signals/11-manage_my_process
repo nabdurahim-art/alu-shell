@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script manages the manage_my_process daemon
 
 PID_FILE="/var/run/my_process.pid"
 PROCESS="./manage_my_process"
@@ -32,4 +33,5 @@ case "$1" in
         echo "Usage: manage_my_process {start|stop|restart}"
         ;;
 esac
+
 
